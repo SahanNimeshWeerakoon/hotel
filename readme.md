@@ -7,6 +7,15 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## How to initialize
+Do the followings in order
+ - [Clone the project folder to the local server]
+ - [Navigate from CMD or terminal to the directory]
+ - [Do "composer install"]
+ - [Do "npm install"]
+ - [Create a local domain for the public folder in the project folder]
+ - [After starting the localserver type the custom local domain you created above]
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
