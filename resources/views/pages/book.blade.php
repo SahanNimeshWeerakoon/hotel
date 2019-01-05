@@ -1,3 +1,16 @@
+<?php 
+    $yourName = __('header.yourname');
+    $yourNumber = __('header.yourphone');
+    $yourEmail = __('header.youremail');
+
+    $nic = __('header.nic');
+    $checkin = __('header.checkin');
+    $checkout = __('header.checkout');
+    $ac = __('header.acnum');
+    $nonac = __('header.nonacnum');
+    $book = __('header.reserve');
+?>
+
 @extends('layouts.app')
     @section('content')
         <div class="jumbotron">
@@ -8,8 +21,8 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6">
-                                {{Form::label('name', 'Your Name')}}
-                                {{Form::text('name', '', ['class'=>'form-control', 'placeholder'=>'Your Name'])}}
+                                {{Form::label('name', "$yourName")}}
+                                {{Form::text('name', '', ['class'=>'form-control', 'placeholder'=>"$yourName"])}}
                             </div>
                             <div class="col-md-6"></div>
                         </div>
@@ -17,12 +30,12 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-4">
-                                {{Form::label('phone', 'Your Phone Number')}}
-                                {{Form::text('phone', '', ['class'=>'form-control', 'placeholder'=>'Your Phone Number'])}}
+                                {{Form::label('phone', "$yourNumber")}}
+                                {{Form::text('phone', '', ['class'=>'form-control', 'placeholder'=>"$yourNumber"])}}
                             </div>
                             <div class="col-md-4">
-                                {{Form::label('email', 'Your Email')}}
-                                {{Form::text('email', '', ['class'=>'form-control', 'placeholder'=>'Your Email'])}}
+                                {{Form::label('email', "$yourEmail")}}
+                                {{Form::text('email', '', ['class'=>'form-control', 'placeholder'=>"$yourEmail"])}}
                             </div>
                             <div class="col-md-2"></div>
                         </div>
@@ -30,16 +43,16 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-4">
-                                {{Form::label('nic', 'Your NIC')}}
-                                {{Form::text('nic', '', ['class'=>'form-control', 'placeholder'=>'Your National Identity Card Number'])}}
+                                {{Form::label('nic', "$nic")}}
+                                {{Form::text('nic', '', ['class'=>'form-control', 'placeholder'=>"$nic"])}}
                             </div>
                             <div class="col-md-2">
-                                    {{Form::label('cid', 'Check In Date')}}
-                                    {{Form::date('cid', '', ['class'=>'form-control', 'placeholder'=>'Your Check In Date'])}}
+                                    {{Form::label('cid', "$checkin")}}
+                                    {{Form::date('cid', '', ['class'=>'form-control', 'placeholder'=>"$checkin"])}}
                                 </div>
                                 <div class="col-md-2">
-                                    {{Form::label('cod', 'Check Out Date')}}
-                                    {{Form::date('cod', '', ['class'=>'form-control', 'placeholder'=>'Your Check Out Date'])}}
+                                    {{Form::label('cod', "$checkout")}}
+                                    {{Form::date('cod', '', ['class'=>'form-control', 'placeholder'=>"$checkout"])}}
                             </div>
                             <div class="col-md-4"></div>
                         </div>
@@ -47,18 +60,18 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-4">
-                                {{Form::label('nonac', 'Number of non A/C rooms')}}
-                                {{Form::number('nonac', '', ['class'=>'form-control', 'min'=>'0', 'placeholder'=>'Number Of non A/C Rooms Purchasing'])}}
+                                {{Form::label('nonac', "$ac")}}
+                                {{Form::number('nonac', '', ['class'=>'form-control', 'min'=>'0', 'placeholder'=>"$ac"])}}
                             </div>
                             <div class="col-md-4">
-                                {{Form::label('acRoom', 'Number of A/C rooms')}}
-                                {{Form::number('acRoom', '', ['class'=>'form-control', 'min'=>'0', 'placeholder'=>'Number Of A/C Rooms Purchasing'])}}
+                                {{Form::label('acRoom', "$nonac")}}
+                                {{Form::number('acRoom', '', ['class'=>'form-control', 'min'=>'0', 'placeholder'=>"$nonac"])}}
                             </div>
                             <div class="col-md-2">
                             </div>
                         </div>
                     </div>
-                    {{Form::submit('BOOK ROOMS', ['class'=>'btn btn-outline-dark'])}}
+                    {{Form::submit("$book", ['class'=>'btn btn-outline-dark'])}}
                 {!!Form::close()!!}
             </div>
         </div>

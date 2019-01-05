@@ -10521,6 +10521,7 @@ a.text-dark:focus {
 .home-carousel .overlay .container button {
   padding: 10px 15px;
   border-radius: 20px;
+  width: 20%;
 }
 
 .bannerDetails {

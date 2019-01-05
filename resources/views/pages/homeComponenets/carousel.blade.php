@@ -6,7 +6,7 @@
                 quibusdam mollitia ipsam omnis veniam iste. Cumque voluptatibus quo laboriosam eveniet fugiat reiciendis 
                 voluptas! Sint quod reiciendis quasi?
             </h1>
-            <button class="btn btn-outline-danger">BOOK A ROOM</button>
+            <button class="btn btn-outline-danger">{{ __('header.book') }}</button>
         </div>
     </div>
 </div>

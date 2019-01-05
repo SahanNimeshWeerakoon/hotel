@@ -17,6 +17,6 @@
             facilis quod provident necessitatibus soluta ipsum unde.Lorem ipsum dolor sit, amet consectetur adi
             pisicing elit. Voluptatum, iure! Possimus dolorem vitae dolore harum suscipit voluptatum esse iusto
         </p>
-        <button class="ml-auto btn btn-outline-dark">see more -></button>        
+        <button class="ml-auto btn btn-outline-dark">{{ __('header.seemore') }}-></button>        
     </div>
 </div>

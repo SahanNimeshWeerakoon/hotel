@@ -1,7 +1,13 @@
+<?php
+$route = $_SERVER['REQUEST_URI'];
+$routeOne = explode( '/',$route);
+$route = $routeOne[1];
+?>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-laravel">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'HOTEL NAME') }}
+            {{-- {{ config('app.name', 'HOTEL NAME') }} --}}
+            {{ __('header.hotel') }}
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
@@ -11,10 +17,10 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="/" class="nav-link">HOME</a>
+                    <a href="/home" class="nav-link">{{ __('header.home') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/about" class="nav-link">ABOUT</a>
+                    <a href="/about" class="nav-link">{{ __('header.about') }}</a>
                 </li>
             </ul>
 
@@ -23,10 +29,10 @@
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
-                        <a href="/contact" class="nav-link">INQUIRE</a>
+                        <a href="/contact" class="nav-link">{{ __('header.inquire') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/book" class="nav-link">BOOK A ROOM</a>
+                        <a href="/book" class="nav-link">{{ __('header.book') }}</a>
                     </li>
                 @else
                     {{-- <li class="nav-item">
@@ -54,7 +60,17 @@
                             </form>
                         </div>
                     </li>
-                @endguest
+                    @endguest
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Language
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="{{'/'.$route.'/en'}}">English</a>
+                            <a class="dropdown-item" href="{{'/'.$route.'/fr'}}">français</a>
+                            <a class="dropdown-item" href="{{'/'.$route.'/ch'}}">普通话</a>
+                        </div>
+                    </li>
             </ul>
         </div>
     </div>

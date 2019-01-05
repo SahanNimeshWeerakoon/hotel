@@ -12,11 +12,25 @@
 */
 
 // Public Routes
-Route::get('/', 'PagesController@home');
+Route::get('/', function() {
+    return redirect('/home');
+});
 Route::get('/home', 'PagesController@home');
+Route::get('/home/{lang?}', function($lang=null) {
+    App::setlocale($lang);
+    return view('pages.home');
+});
 Route::get('/about', 'PagesController@about');
 Route::get('/contact', 'PagesController@contact');
+Route::get('/contact/{lang?}', function($lang=null) {
+    App::setlocale($lang);
+    return view('pages.contact');
+});
 Route::get('/book', 'PagesController@book');
+Route::get('/book/{lang?}', function($lang=null) {
+    App::setlocale($lang);
+    return view('pages.book');
+});
 
 Route::post('/contact', 'SubmitController@contact');
 Route::post('/book', 'SubmitController@book');
