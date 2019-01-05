@@ -9,12 +9,13 @@
 
 ## How to initialize
 Do the followings in order
- - [Clone the project folder to the local server]
- - [Navigate from CMD or terminal to the directory]
- - [Do "composer install"]
- - [Do "npm install"]
- - [Create a local domain for the public folder in the project folder]
- - [After starting the localserver type the custom local domain you created above]
+ - Clone the project folder to the local server
+ - Navigate from CMD or terminal to the directory
+ - Do "composer install"
+ - Do "npm install"
+ - run "php artisan serve" (if you do this below options are no needed and directly go to http://localhost:8000)
+ - Create a local domain for the public folder in the project folder
+ - After starting the localserver type the custom local domain you created above
 
 ## About Laravel
 
